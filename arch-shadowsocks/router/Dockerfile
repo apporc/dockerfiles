@@ -6,8 +6,7 @@ LABEL arch="x86_64"
 
 RUN mkdir -p /chnroute_file
 
-VOLUME /etc/shadowsocks/shadowsocks-redir.json
-VOLUME /etc/shadowsocks/shadowsocks.json
+VOLUME /etc/shadowsocks
 COPY chnroute_url create_rules /chnroute_file/
 COPY startup.sh /
 
