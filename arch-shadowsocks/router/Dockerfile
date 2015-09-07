@@ -11,7 +11,7 @@ COPY shadowsocks.json /etc/shadowsocks/shadowsocks.json
 COPY chnroute_url create_rules /chnroute_file/
 COPY startup.sh /
 
-RUN pacman -Sy --noconfirm iptables wget && \
+RUN pacman -Sy --noconfirm iptables wget iproute2 && \
     wget -i /chnroute_url -O /chnroute_file/chnroute.txt && \
     rm -rf /var/cache/pacman/pkg/
 
